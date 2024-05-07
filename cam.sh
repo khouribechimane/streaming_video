@@ -16,12 +16,12 @@ NORMAL=$(tput sgr0)
 
 ASK_TO_REBOOT=0
 RASPICONFIG=/boot/config.txt
-MAINSCRIPT="./RPi_Cam_Web_Interface_Installer.sh"
+MAINSCRIPT="./Streaming_video_Installer.sh"
 
 # Version stuff moved out functions as we need it more when one time.
 versionfile="./www/config.php"
 version=$(cat $versionfile | grep "'APP_VERSION'" | cut -d "'" -f4)
-backtitle="Copyright (c) 2014, Silvan Melchior. RPi Cam $version"
+
 
 get_config_var() {
   lua - "$1" "$2" <<EOF
